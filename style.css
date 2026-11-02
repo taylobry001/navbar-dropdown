@@ -2,7 +2,9 @@
    box-sizing: border-box;
 }
 :root{
-    --text : hsl(0,0,0);
+    --text : hsl(0, 2%, 91%);
+    --pseudo : hsl(208, 100%, 97%);
+    --text-shadow :  rgba(0,0,0,0.582);
     --shadow :  rgb(172, 172, 172);
     --accent : hsl(112, 2%, 28%);
     --gray : hsl(113, 3%, 48%);
@@ -23,18 +25,23 @@ p{
     
 }
 a{
-    display: block;
+    display: inline-block;
     padding: 0.75rem;
     text-decoration: none;
+    text-shadow: 2px 1px black ;
     font-weight: 600;
 
   &:link,
   &:visited{
-    color:aliceblue; 
+    color:var(--pseudo);
+     
   }
   &:hover{
     background-color: var() ;
     color:black;
+    text-shadow: none;
+     transform:scale(1.4);
+     transition-duration: .25s;
 
   }
 }
@@ -47,6 +54,7 @@ padding: 1.5 0 0.5rem;
 
 }
 nav{
+    box-shadow: 2px 2px rgba(0, 0, 0, 0.582);
     background-color: var(--accent);
 
     ul{
@@ -61,12 +69,15 @@ nav{
 }
 
 footer{
-    background-color: var(--accent)
+    background-color: var(--accent);
+    color: var(--text);
+    text-shadow: 2px 2px rgba(0,0,0,0.582);
+    box-shadow: 2px 2px rgba(0, 0, 0, 0.582);
 }
 
 #top{
-    text-decoration: underline;
-    text-shadow: 2px 2px hsla(0, 0%, 81%, 0.815);
+
+    text-shadow: 2px 3px hsla(0, 0%, 0%, 0.815);
 }
 
 h1,h2,h3{
@@ -74,5 +85,4 @@ h1,h2,h3{
     line-height: 1.2;
 
 }
-
 
